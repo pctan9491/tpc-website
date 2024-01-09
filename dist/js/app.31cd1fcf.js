@@ -155,17 +155,7 @@
           name: "Home",
           data() {
             return {
-              photos: [
-                "/image/personal-pic4.jpg",
-                "/image/personal-pic5.jpg",
-                "/image/personal-pic6.jpg",
-                "/image/personal-pic7.jpg",
-                "/image/personal-pic8.jpg",
-                "/image/personal-pic9.jpg",
-                "/image/personal-pic10.jpg",
-                "/image/personal-pic11.jpg",
-                "/image/personal-pic12.jpg",
-              ],
+              photos: [],
               currentPhotoIndex: 0,
               photoKey: 0,
             };
