@@ -445,7 +445,7 @@
         const ge = (0, b.p7)({
             history: (0, b.PO)(),
             routes: [
-              { path: "/home", component: S, redirect: { name: "Home" } },
+              { path: "/", component: S, redirect: { name: "Home" } },
               { path: "/about", component: W },
               { path: "/resume", component: L },
               { path: "/gallery", component: ae },
