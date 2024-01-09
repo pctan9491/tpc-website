@@ -10,7 +10,7 @@ import Contact from "./views/Contact.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", component: Home },
+    { path: "/", component: Home, redirect: { name: "Home" } },
     { path: "/about", component: About },
     { path: "/resume", component: Resume },
     { path: "/gallery", component: Gallery },
