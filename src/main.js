@@ -6,10 +6,9 @@ import About from "./views/About.vue";
 import Resume from "./views/Resume.vue";
 import Gallery from "./views/Gallery.vue";
 import Contact from "./views/Contact.vue";
-BASE_URL = /tpc-website/;
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.VUE_APP_BASE_URL),
   routes: [
     { path: "/", component: Home },
     { path: "/about", component: About },
