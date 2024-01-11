@@ -305,11 +305,11 @@
           data() {
             let e = [
               {
-                src: "/image/personal-pic1.jpg",
+                src: "image/personal-pic1.jpg",
                 alt: "Description of image 1",
               },
               {
-                src: "/image/personal-pic2.jpg",
+                src: "image/personal-pic2.jpg",
                 alt: "Description of image 2",
               },
               {
