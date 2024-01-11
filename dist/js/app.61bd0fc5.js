@@ -156,15 +156,15 @@
           data() {
             return {
               photos: [
-                "/image/personal-pic4.jpg",
-                "/image/personal-pic5.jpg",
-                "/image/personal-pic6.jpg",
-                "/image/personal-pic7.jpg",
-                "/image/personal-pic8.jpg",
-                "/image/personal-pic9.jpg",
-                "/image/personal-pic10.jpg",
-                "/image/personal-pic11.jpg",
-                "/image/personal-pic12.jpg",
+                "image/personal-pic4.jpg",
+                "image/personal-pic5.jpg",
+                "image/personal-pic6.jpg",
+                "image/personal-pic7.jpg",
+                "image/personal-pic8.jpg",
+                "image/personal-pic9.jpg",
+                "image/personal-pic10.jpg",
+                "image/personal-pic11.jpg",
+                "image/personal-pic12.jpg",
               ],
               currentPhotoIndex: 0,
               photoKey: 0,
@@ -309,47 +309,47 @@
                 alt: "Description of image 1",
               },
               {
-                src: "/image/personal-pic2.jpg",
+                src: "image/personal-pic2.jpg",
                 alt: "Description of image 2",
               },
               {
-                src: "/image/personal-pic3.jpg",
+                src: "image/personal-pic3.jpg",
                 alt: "Description of image 3",
               },
               {
-                src: "/image/personal-pic4.jpg",
+                src: "image/personal-pic4.jpg",
                 alt: "Description of image 4",
               },
               {
-                src: "/image/personal-pic5.jpg",
+                src: "image/personal-pic5.jpg",
                 alt: "Description of image 5",
               },
               {
-                src: "/image/personal-pic6.jpg",
+                src: "image/personal-pic6.jpg",
                 alt: "Description of image 6",
               },
               {
-                src: "/image/personal-pic7.jpg",
+                src: "image/personal-pic7.jpg",
                 alt: "Description of image 7",
               },
               {
-                src: "/image/personal-pic8.jpg",
+                src: "image/personal-pic8.jpg",
                 alt: "Description of image 8",
               },
               {
-                src: "/image/personal-pic9.jpg",
+                src: "image/personal-pic9.jpg",
                 alt: "Description of image 9",
               },
               {
-                src: "/image/personal-pic10.jpg",
+                src: "image/personal-pic10.jpg",
                 alt: "Description of image 10",
               },
               {
-                src: "/image/personal-pic11.jpg",
+                src: "image/personal-pic11.jpg",
                 alt: "Description of image 11",
               },
               {
-                src: "/image/personal-pic12.jpg",
+                src: "image/personal-pic12.jpg",
                 alt: "Description of image 12",
               },
             ].sort((e, n) => {
