@@ -215,4 +215,37 @@ ul {
 .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .profile-picture-container {
+    top: 50%; /* Adjust position for smaller screens */
+  }
+
+  .profile-picture {
+    width: 80px; /* Smaller profile picture on small devices */
+    height: 80px;
+  }
+
+  .title-section h1 {
+    font-size: 40px; /* Smaller font size for the title */
+  }
+
+  .content-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .photo-gallery,
+  .designation {
+    flex-basis: 100%; /* Full width for each section on small screens */
+    max-width: 100%;
+  }
+
+  .designation {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Ensure touch-friendly interactive elements */
+.gallery-controls button {
+  padding: 12px 20px; /* Larger buttons for touch devices */
+}
 </style>
