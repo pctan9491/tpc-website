@@ -313,7 +313,7 @@
                 alt: "Description of image 2",
               },
               {
-                src: "/image/personal-pic3.jpg",
+                src: "image/personal-pic3.jpg",
                 alt: "Description of image 3",
               },
               {
