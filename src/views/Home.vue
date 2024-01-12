@@ -243,9 +243,4 @@ ul {
     padding: 20px; /* Adjust padding for smaller screens */
   }
 }
-
-/* Ensure touch-friendly interactive elements */
-.gallery-controls button {
-  padding: 12px 20px; /* Larger buttons for touch devices */
-}
 </style>
