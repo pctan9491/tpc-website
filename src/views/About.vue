@@ -463,94 +463,92 @@ body {
     margin-bottom: 20px; /* Provide some space between the cards */
   }
 }
-@media screen and (max-width: 992px) {
-  /* Sidebar */
-  .sidebar {
-    transform: translateX(-250px); /* Hide sidebar off-screen to the left */
-  }
-
-  /* Main Content */
-  .main-content {
-    margin-left: 0; /* Expand content to full width */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Content Section */
-  .content-section-about {
-    padding: 20px; /* Adjust padding on smaller screens */
-    height: auto; /* Allow each section to grow as needed */
-  }
-
-  /* Education Card */
-  .education-card {
-    width: 100%; /* Full width for better readability */
-  }
-}
 @media (max-width: 768px) {
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 10px 0; /* Adjust padding to reduce vertical space */
+    position: fixed; /* Fixed at the top */
+    width: 100%; /* Full width */
+    height: auto; /* Height of content */
+    padding: 10px 0; /* Reduced vertical padding */
+    display: flex; /* Flex container for the nav items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: #f0f0f0; /* Sidebar color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1000; /* Keep it above other content */
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    overflow-x: auto; /* Allows scrolling horizontally if too many items */
+    overflow-y: hidden; /* No vertical scroll */
   }
+
+  /* Hide profile image on small screens */
   .profile-image {
-    display: none; /* Hide the profile image on small screens */
+    display: none;
   }
+
+  /* Navigation link adjustments for smaller screens */
   .sidebar-nav a {
-    padding: 10px; /* Reduce padding */
-    font-size: 0.9em; /* Reduce font size */
+    padding: 10px 15px; /* Slightly larger touch targets */
+    font-size: 0.85em; /* Smaller text to fit more items */
+    white-space: nowrap; /* Prevent wrapping of nav items */
+  }
+
+  /* Adjust the main content area */
+  .main-content {
+    margin-top: 60px; /* Make room for the fixed top bar navigation */
+    margin-left: 0; /* Remove the left margin as sidebar is now a top bar */
   }
 }
 
+/* Content sections should be more readable on mobile */
 @media (max-width: 768px) {
-  .main-content {
-    margin-left: 0; /* Content should take full width */
-    padding: 10px; /* Add padding around content */
-  }
   .content-section-about {
-    padding: 15px; /* Adjust section padding */
-    height: auto; /* Height should be auto to contain content */
-    text-align: left; /* Align text to the left for readability */
+    padding: 20px; /* Adequate padding from all sides */
+    height: auto; /* Height is based on content */
+    text-align: justify; /* Ensures text is evenly spaced */
   }
+
   .section-heading {
-    font-size: 1.5em; /* Reduce the size of headings */
+    font-size: 1.75em; /* Large enough to read, small enough to fit */
   }
-}
-/* Adjustments for experience details and education cards */
-@media (max-width: 768px) {
+
+  /* Experience and education details layout */
   .experience-details,
   .education-card {
-    margin: 10px 0; /* Add some space between cards */
-    padding: 10px; /* Reduce padding */
+    box-shadow: none; /* Less emphasis on box shadows */
+    padding: 15px; /* Enough padding for touch interactions */
   }
-} /* Further adjustments for very small screens */
+
+  /* Education cards */
+  .education-section {
+    padding: 0; /* Remove padding to use the space more effectively */
+  }
+
+  .education-card {
+    width: 100%; /* Full width for better use of space */
+    margin: 10px 0; /* Space between cards */
+  }
+}
+
+/* Very small screen adjustments */
 @media (max-width: 480px) {
+  /* Section headings even smaller for very tight spaces */
   .section-heading {
-    font-size: 1.25em; /* Even smaller headings for very small screens */
+    font-size: 1.5em;
   }
+
+  /* Adjust font sizes for paragraphs */
   .content-section-about p,
   .experience-details p,
   .education-card p {
-    font-size: 0.9em; /* Smaller text for better readability */
-    line-height: 1.4; /* Adjust line height for readability */
+    font-size: 0.9em; /* Slightly smaller text for dense paragraphs */
+    line-height: 1.4; /* Improved line spacing for readability */
   }
+
+  /* Sidebar nav adjustments for very small screens */
   .sidebar-nav a {
-    padding: 5px 10px; /* Reduce padding for nav links */
-  }
-  /* Adjust the sidebar navigation to be more compact */
-  .sidebar-nav {
-    padding-left: 0; /* Remove padding */
-  }
-  .sidebar-nav a {
-    text-align: center; /* Center-align the text for navigation links */
-    border-bottom: 1px solid #ddd; /* Add separators between links */
-  }
-}
-@media (max-width: 768px) {
-  /* Reduce font size for mobile readability */
-  .content-section-about p {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 0.8em; /* Even smaller font size to fit all items */
+    padding: 8px 12px; /* Adjust padding to be proportional */
   }
 }
 </style>
