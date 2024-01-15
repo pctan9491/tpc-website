@@ -150,9 +150,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-}
-/* Apply overall font family */
-body {
   font-family: "Lato", sans-serif;
 }
 
@@ -164,8 +161,9 @@ body {
   bottom: 0;
   width: 250px; /* Adjust width as needed */
   background: #f0f0f0; /* Sidebar color */
-  overflow-y: auto; /* Enable scrolling */
+  overflow-y: auto; /* Enable scrolling if content is long */
   z-index: 100; /* Above other content */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for sidebar toggle */
 }
 
 /* Style your profile image */
@@ -194,7 +192,7 @@ body {
   margin-left: 250px; /* Equal to the width of the sidebar */
   overflow-y: auto;
   height: 100vh;
-  background: #ffffff; /* Background color for content */
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition for content area when sidebar toggles */
 }
 
 /* Make each section fill the viewport */
@@ -467,5 +465,91 @@ body {
     width: 100%; /* Each card takes full width on smaller screens */
     margin-bottom: 20px; /* Provide some space between the cards */
   }
+}
+@media screen and (max-width: 992px) {
+  /* Sidebar */
+  .sidebar {
+    transform: translateX(-250px); /* Hide sidebar off-screen to the left */
+  }
+
+  /* Main Content */
+  .main-content {
+    margin-left: 0; /* Expand content to full width */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Content Section */
+  .content-section-about {
+    padding: 20px; /* Adjust padding on smaller screens */
+    height: auto; /* Allow each section to grow as needed */
+  }
+
+  /* Education Card */
+  .education-card {
+    width: 100%; /* Full width for better readability */
+  }
+}
+/* Adjustments for mobile and smaller devices */
+@media (max-width: 768px) {
+  /* Collapse the sidebar into a top bar */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static; /* Let the sidebar flow in the document flow */
+  }
+
+  /* Adjust profile image size for small screens */
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Adjust the main content layout */
+  .main-content {
+    margin-left: 0; /* Reset left margin since sidebar is no longer fixed */
+    padding-top: 20px; /* Add padding to ensure content doesn't overlap with the sidebar */
+  }
+
+  /* Adjust content section for smaller screens */
+  .content-section-about {
+    height: auto; /* Let each section grow as much as needed */
+    padding: 20px; /* Adjust padding to better fit small screens */
+  }
+
+  /* Make section headings smaller */
+  .section-heading {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust layout of experience and education cards for small screens */
+  .experience-details,
+  .education-card {
+    width: 100%; /* Full width on smaller screens */
+    box-shadow: none; /* Optionally remove shadows to fit a flat design */
+  }
+
+  /* Stack education cards vertically */
+  .education-section {
+    flex-direction: column;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  /* Make sidebar navigation a dropdown or a collapsible menu */
+  .sidebar-nav a {
+    display: inline-block; /* Adjust display to inline for a horizontal layout */
+    margin: 0; /* Remove margins */
+    padding: 8px; /* Reduce padding */
+    font-size: 0.9em; /* Make text smaller to fit more items */
+  }
+
+  /* Adjust font sizes for readability on very small screens */
+  .section-heading {
+    font-size: 1.5em;
+  }
+
+  /* Any other specific adjustments for very small screens can be added here */
 }
 </style>
