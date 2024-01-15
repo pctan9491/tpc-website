@@ -163,6 +163,7 @@ body {
   background: #f0f0f0; /* Sidebar color */
   overflow-y: auto; /* Enable scrolling if content is long */
   z-index: 100; /* Above other content */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for sidebar toggle */
 }
 
 /* Style your profile image */
@@ -463,92 +464,100 @@ body {
     margin-bottom: 20px; /* Provide some space between the cards */
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 992px) {
+  /* Sidebar */
   .sidebar {
-    position: fixed; /* Fixed at the top */
-    width: 100%; /* Full width */
-    height: auto; /* Height of content */
-    padding: 10px 0; /* Reduced vertical padding */
-    display: flex; /* Flex container for the nav items */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    background: #f0f0f0; /* Sidebar color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    z-index: 1000; /* Keep it above other content */
-    top: 0; /* Stick to the top */
-    left: 0; /* Stick to the left */
-    overflow-x: auto; /* Allows scrolling horizontally if too many items */
-    overflow-y: hidden; /* No vertical scroll */
+    transform: translateX(-250px); /* Hide sidebar off-screen to the left */
   }
 
-  /* Hide profile image on small screens */
-  .profile-image {
-    display: none;
-  }
-
-  /* Navigation link adjustments for smaller screens */
-  .sidebar-nav a {
-    padding: 10px 15px; /* Slightly larger touch targets */
-    font-size: 0.85em; /* Smaller text to fit more items */
-    white-space: nowrap; /* Prevent wrapping of nav items */
-  }
-
-  /* Adjust the main content area */
+  /* Main Content */
   .main-content {
-    margin-top: 60px; /* Make room for the fixed top bar navigation */
-    margin-left: 0; /* Remove the left margin as sidebar is now a top bar */
+    margin-left: 0; /* Expand content to full width */
   }
 }
 
-/* Content sections should be more readable on mobile */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  /* Content Section */
   .content-section-about {
-    padding: 20px; /* Adequate padding from all sides */
-    height: auto; /* Height is based on content */
-    text-align: justify; /* Ensures text is evenly spaced */
+    padding: 20px; /* Adjust padding on smaller screens */
+    height: auto; /* Allow each section to grow as needed */
   }
 
+  /* Education Card */
+  .education-card {
+    width: 100%; /* Full width for better readability */
+  }
+}
+/* Adjust content for smaller screens and ensure it stretches to full width */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Remove margin to use full screen width */
+    padding-top: 60px; /* Add padding to top to not overlap with the collapsed sidebar */
+  }
+
+  .content-section-about {
+    height: auto; /* Allow content sections to fit their content */
+    padding: 20px; /* Add padding for spacing on smaller screens */
+  }
+
+  .education-section,
+  .experience-details {
+    flex-direction: column; /* Stack cards and details vertically /
+align-items: center; / Center-align the items */
+  }
+
+  .education-card,
+  .experience-details {
+    width: 100%; /* Make cards full width /
+margin-bottom: 20px; / Add space between cards */
+  }
+
+  /* Adjust the profile image size and the sidebar navigation for mobile screens */
+  .profile-image {
+    width: 80px; /* Smaller profile image */
+    height: 80px; /* Keep aspect ratio */
+  }
+
+  .sidebar-nav a {
+    padding: 12px 20px; /* Larger padding for easier touch */
+  }
+
+  /* Adjust headings and text sizes for better readability */
   .section-heading {
-    font-size: 1.75em; /* Large enough to read, small enough to fit */
+    font-size: 1.75em; /* Smaller headings */
   }
 
-  /* Experience and education details layout */
-  .experience-details,
-  .education-card {
-    box-shadow: none; /* Less emphasis on box shadows */
-    padding: 15px; /* Enough padding for touch interactions */
-  }
-
-  /* Education cards */
-  .education-section {
-    padding: 0; /* Remove padding to use the space more effectively */
-  }
-
-  .education-card {
-    width: 100%; /* Full width for better use of space */
-    margin: 10px 0; /* Space between cards */
+  .experience-details p,
+  .education-card p,
+  .content-section-about p {
+    font-size: 0.95em; /* Slightly smaller text */
   }
 }
 
-/* Very small screen adjustments */
+/* Further adjustments for very small screens */
 @media (max-width: 480px) {
-  /* Section headings even smaller for very tight spaces */
-  .section-heading {
-    font-size: 1.5em;
+  /* Consider hiding less important content or reducing the amount of content displayed */
+  .sidebar-nav a {
+    font-size: 0.85em; /* Even smaller font size for the sidebar */
+    padding: 8px 16px; /* Adjust padding accordingly */
   }
 
-  /* Adjust font sizes for paragraphs */
+  .section-heading {
+    font-size: 1.5em; /* Smaller headings for very small screens */
+  }
+
+  /* You may want to adjust the line heights for the paragraphs to ensure the text doesn't appear cramped */
   .content-section-about p,
   .experience-details p,
   .education-card p {
-    font-size: 0.9em; /* Slightly smaller text for dense paragraphs */
-    line-height: 1.4; /* Improved line spacing for readability */
+    line-height: 1.4; /* Adjust line height for readability */
   }
 
-  /* Sidebar nav adjustments for very small screens */
-  .sidebar-nav a {
-    font-size: 0.8em; /* Even smaller font size to fit all items */
-    padding: 8px 12px; /* Adjust padding to be proportional */
+  /* Adjust card styles for better mobile interaction */
+  .education-card,
+  .experience-details {
+    padding: 15px; /* Sufficient padding inside cards */
+    border-radius: 8px; /* Slightly rounder corners for a softer look */
   }
 }
 </style>
