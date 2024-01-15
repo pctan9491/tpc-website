@@ -197,7 +197,6 @@ html {
   background: #f0f0f0;
   overflow-y: auto;
   z-index: 100;
-  transition: transform 0.3s ease-in-out;
 }
 .profile-image {
   width: 150px;
@@ -217,9 +216,7 @@ html {
 }
 .main-content {
   margin-left: 250px;
-  overflow-y: auto;
-  height: 100vh;
-  transition: margin-left 0.3s ease-in-out;
+  background: #fff;
 }
 .content-section-about {
   height: 100vh;
@@ -460,43 +457,60 @@ html {
 }
 @media (max-width: 768px) {
   .sidebar {
+    position: relative;
     width: 100%;
     height: auto;
-    position: static;
+    padding: 10px 0;
   }
   .profile-image {
-    width: 100px;
-    height: 100px;
+    display: none;
+  }
+  .sidebar-nav a {
+    padding: 10px;
+    font-size: 0.9em;
   }
   .main-content {
     margin-left: 0;
-    padding-top: 20px;
+    padding: 10px;
   }
   .content-section-about {
+    padding: 15px;
     height: auto;
-    padding: 20px;
-  }
-  .section-heading {
-    font-size: 2em;
-  }
-  .education-card,
-  .experience-details {
-    width: 100%;
-    box-shadow: none;
-  }
-  .education-section {
-    flex-direction: column;
-  }
-}
-@media (max-width: 480px) {
-  .sidebar-nav a {
-    display: inline-block;
-    margin: 0;
-    padding: 8px;
-    font-size: 0.9em;
+    text-align: left;
   }
   .section-heading {
     font-size: 1.5em;
+  }
+  .education-card,
+  .experience-details {
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.25em;
+  }
+  .content-section-about p,
+  .education-card p,
+  .experience-details p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .sidebar-nav a {
+    padding: 5px 10px;
+  }
+  .sidebar-nav {
+    padding-left: 0;
+  }
+  .sidebar-nav a {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+}
+@media (max-width: 768px) {
+  .content-section-about p {
+    font-size: 1rem;
   }
 }
 .resume-page {
