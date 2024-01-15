@@ -1,67 +1,94 @@
 (function () {
   "use strict";
   var e = {
-      3031: function (e, n, t) {
-        var a = t(9242),
-          i = t(3396);
+      9759: function (e, n, a) {
+        var t = a(9242),
+          i = a(3396);
         const o = { id: "app" };
-        function s(e, n, t, a, s, r) {
+        function s(e, n, a, t, s, r) {
           const c = (0, i.up)("NavBar"),
             l = (0, i.up)("router-view");
           return (0, i.wg)(), (0, i.iD)("div", o, [(0, i.Wm)(c), (0, i.Wm)(l)]);
         }
-        const r = { class: "navbar" },
-          c = { class: "nav-list" },
+        var r = a(7139);
+        const c = { class: "navbar" },
           l = { class: "nav-item" };
-        function p(e, n, t, a, o, s) {
+        function p(e, n, a, t, o, s) {
           const p = (0, i.up)("router-link");
           return (
             (0, i.wg)(),
-            (0, i.iD)("nav", r, [
-              (0, i._)("ul", c, [
-                (0, i._)("li", l, [
-                  (0, i.Wm)(
-                    p,
-                    { to: "/", class: "nav-link" },
-                    { default: (0, i.w5)(() => [(0, i.Uk)("Home")]), _: 1 }
-                  ),
-                  (0, i.Wm)(
-                    p,
-                    { to: "/about", class: "nav-link" },
-                    { default: (0, i.w5)(() => [(0, i.Uk)("About Me")]), _: 1 }
-                  ),
-                  (0, i.Wm)(
-                    p,
-                    { to: "/resume", class: "nav-link" },
-                    { default: (0, i.w5)(() => [(0, i.Uk)("Resume")]), _: 1 }
-                  ),
-                  (0, i.Wm)(
-                    p,
-                    { to: "/gallery", class: "nav-link" },
-                    { default: (0, i.w5)(() => [(0, i.Uk)("Gallery")]), _: 1 }
-                  ),
-                  (0, i.Wm)(
-                    p,
-                    { to: "/contact", class: "nav-link" },
-                    {
-                      default: (0, i.w5)(() => [(0, i.Uk)("Contact Me")]),
-                      _: 1,
-                    }
-                  ),
-                ]),
-              ]),
+            (0, i.iD)("nav", c, [
+              (0, i._)(
+                "button",
+                {
+                  onClick:
+                    n[0] || (n[0] = (...e) => s.toggleNav && s.toggleNav(...e)),
+                  class: "nav-toggle",
+                },
+                "☰"
+              ),
+              (0, i._)(
+                "ul",
+                { class: (0, r.C_)(["nav-list", { "nav-active": o.navOpen }]) },
+                [
+                  (0, i._)("li", l, [
+                    (0, i.Wm)(
+                      p,
+                      { to: "/", class: "nav-link" },
+                      { default: (0, i.w5)(() => [(0, i.Uk)("Home")]), _: 1 }
+                    ),
+                    (0, i.Wm)(
+                      p,
+                      { to: "/about", class: "nav-link" },
+                      {
+                        default: (0, i.w5)(() => [(0, i.Uk)("About Me")]),
+                        _: 1,
+                      }
+                    ),
+                    (0, i.Wm)(
+                      p,
+                      { to: "/resume", class: "nav-link" },
+                      { default: (0, i.w5)(() => [(0, i.Uk)("Resume")]), _: 1 }
+                    ),
+                    (0, i.Wm)(
+                      p,
+                      { to: "/gallery", class: "nav-link" },
+                      { default: (0, i.w5)(() => [(0, i.Uk)("Gallery")]), _: 1 }
+                    ),
+                    (0, i.Wm)(
+                      p,
+                      { to: "/contact", class: "nav-link" },
+                      {
+                        default: (0, i.w5)(() => [(0, i.Uk)("Contact Me")]),
+                        _: 1,
+                      }
+                    ),
+                  ]),
+                ],
+                2
+              ),
             ])
           );
         }
-        var h = { name: "NavBar" },
-          u = t(89);
-        const m = (0, u.Z)(h, [["render", p]]);
-        var d = m,
-          g = { name: "App", components: { NavBar: d } };
-        const f = (0, u.Z)(g, [["render", s]]);
+        var h = {
+            name: "NavBar",
+            data() {
+              return { navOpen: !1 };
+            },
+            methods: {
+              toggleNav() {
+                this.navOpen = !this.navOpen;
+              },
+            },
+          },
+          u = a(89);
+        const g = (0, u.Z)(h, [["render", p]]);
+        var d = g,
+          m = { name: "App", components: { NavBar: d } };
+        const f = (0, u.Z)(m, [["render", s]]);
         var v = f,
-          b = t(2483),
-          y = t.p + "img/profile-pic.e64353f4.jpeg";
+          b = a(2483),
+          y = a.p + "img/profile-pic.e64353f4.jpeg";
         const w = { class: "home-container" },
           k = (0, i._)(
             "div",
@@ -96,7 +123,7 @@
             ],
             -1
           );
-        function x(e, n, t, o, s, r) {
+        function x(e, n, a, o, s, r) {
           return (
             (0, i.wg)(),
             (0, i.iD)("div", w, [
@@ -104,7 +131,7 @@
               (0, i._)("div", P, [
                 (0, i._)("div", _, [
                   (0, i.Wm)(
-                    a.uT,
+                    t.uT,
                     { name: "fade", mode: "out-in" },
                     {
                       default: (0, i.w5)(() => [
@@ -204,12 +231,12 @@
             2
           ),
           R = [M];
-        function N(e, n, t, a, o, s) {
+        function N(e, n, a, t, o, s) {
           return (0, i.wg)(), (0, i.iD)("div", I, R);
         }
-        var B = { name: "About" };
-        const O = (0, u.Z)(B, [["render", N]]);
-        var W = O;
+        var O = { name: "About" };
+        const B = (0, u.Z)(O, [["render", N]]);
+        var W = B;
         const E = { class: "resume-page" },
           U = { class: "resume-content" },
           H = (0, i._)("h1", { class: "resume-title" }, "Resume", -1),
@@ -227,7 +254,7 @@
             -1
           ),
           q = [J, Z];
-        function K(e, n, t, a, o, s) {
+        function K(e, n, a, t, o, s) {
           return (
             (0, i.wg)(),
             (0, i.iD)("div", E, [
@@ -269,7 +296,7 @@
           ),
           z = { class: "gallery-grid" },
           X = ["src", "alt"];
-        function $(e, n, t, a, o, s) {
+        function $(e, n, a, t, o, s) {
           return (
             (0, i.wg)(),
             (0, i.iD)("div", Q, [
@@ -353,19 +380,19 @@
                 alt: "Description of image 12",
               },
             ].sort((e, n) => {
-              let t = parseInt(e.src.match(/\d+/)[0]),
-                a = parseInt(n.src.match(/\d+/)[0]);
-              return a - t;
+              let a = parseInt(e.src.match(/\d+/)[0]),
+                t = parseInt(n.src.match(/\d+/)[0]);
+              return t - a;
             });
             return { images: e };
           },
         };
         const ne = (0, u.Z)(ee, [["render", $]]);
-        var te = ne;
-        const ae = (e) => (
+        var ae = ne;
+        const te = (e) => (
             (0, i.dD)("data-v-63b98708"), (e = e()), (0, i.Cn)(), e
           ),
-          ie = ae(() =>
+          ie = te(() =>
             (0, i._)(
               "head",
               null,
@@ -379,7 +406,7 @@
             )
           ),
           oe = { class: "contact-page" },
-          se = ae(() =>
+          se = te(() =>
             (0, i._)("h1", { class: "contact-heading" }, "Contact Me", -1)
           ),
           re = { class: "contact-icons" },
@@ -387,9 +414,9 @@
             '<a href="https://www.linkedin.com/in/tan-ping-cheun-0a88ba148/" target="_blank" class="icon-link" data-v-63b98708><i class="fab fa-linkedin" data-v-63b98708></i></a><a href="https://github.com/pctan9491" target="_blank" class="icon-link" data-v-63b98708><i class="fab fa-github" data-v-63b98708></i></a><a href="https://www.instagram.com/pctan9491/" target="_blank" class="icon-link" data-v-63b98708><i class="fab fa-instagram" data-v-63b98708></i></a><a href="https://www.facebook.com/profile.php?id=100007523895074" target="_blank" class="icon-link facebook" data-v-63b98708><i class="fab fa-facebook-square" data-v-63b98708></i></a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pctan9491@gmail.com" target="_blank" class="icon-link email" data-v-63b98708><i class="fas fa-envelope" data-v-63b98708></i></a>',
             5
           ),
-          le = ae(() => (0, i._)("i", { class: "fas fa-phone" }, null, -1)),
+          le = te(() => (0, i._)("i", { class: "fas fa-phone" }, null, -1)),
           pe = { key: 0, class: "phone-number-box" };
-        function he(e, n, t, a, o, s) {
+        function he(e, n, a, t, o, s) {
           return (
             (0, i.wg)(),
             (0, i.iD)(
@@ -437,46 +464,46 @@
             },
           },
         };
-        const me = (0, u.Z)(ue, [
+        const ge = (0, u.Z)(ue, [
           ["render", he],
           ["__scopeId", "data-v-63b98708"],
         ]);
-        var de = me;
-        const ge = (0, b.p7)({
+        var de = ge;
+        const me = (0, b.p7)({
             history: (0, b.PO)("/tpc-website/"),
             routes: [
               { path: "/", component: S },
               { path: "/about", component: W },
               { path: "/resume", component: L },
-              { path: "/gallery", component: te },
+              { path: "/gallery", component: ae },
               { path: "/contact", component: de },
             ],
           }),
-          fe = (0, a.ri)(v);
-        fe.use(ge), fe.mount("#app");
+          fe = (0, t.ri)(v);
+        fe.use(me), fe.mount("#app");
       },
     },
     n = {};
-  function t(a) {
-    var i = n[a];
+  function a(t) {
+    var i = n[t];
     if (void 0 !== i) return i.exports;
-    var o = (n[a] = { exports: {} });
-    return e[a].call(o.exports, o, o.exports, t), o.exports;
+    var o = (n[t] = { exports: {} });
+    return e[t].call(o.exports, o, o.exports, a), o.exports;
   }
-  (t.m = e),
+  (a.m = e),
     (function () {
       var e = [];
-      t.O = function (n, a, i, o) {
-        if (!a) {
+      a.O = function (n, t, i, o) {
+        if (!t) {
           var s = 1 / 0;
           for (p = 0; p < e.length; p++) {
-            (a = e[p][0]), (i = e[p][1]), (o = e[p][2]);
-            for (var r = !0, c = 0; c < a.length; c++)
+            (t = e[p][0]), (i = e[p][1]), (o = e[p][2]);
+            for (var r = !0, c = 0; c < t.length; c++)
               (!1 & o || s >= o) &&
-              Object.keys(t.O).every(function (e) {
-                return t.O[e](a[c]);
+              Object.keys(a.O).every(function (e) {
+                return a.O[e](t[c]);
               })
-                ? a.splice(c--, 1)
+                ? t.splice(c--, 1)
                 : ((r = !1), o < s && (s = o));
             if (r) {
               e.splice(p--, 1);
@@ -488,11 +515,11 @@
         }
         o = o || 0;
         for (var p = e.length; p > 0 && e[p - 1][2] > o; p--) e[p] = e[p - 1];
-        e[p] = [a, i, o];
+        e[p] = [t, i, o];
       };
     })(),
     (function () {
-      t.n = function (e) {
+      a.n = function (e) {
         var n =
           e && e.__esModule
             ? function () {
@@ -501,19 +528,19 @@
             : function () {
                 return e;
               };
-        return t.d(n, { a: n }), n;
+        return a.d(n, { a: n }), n;
       };
     })(),
     (function () {
-      t.d = function (e, n) {
-        for (var a in n)
-          t.o(n, a) &&
-            !t.o(e, a) &&
-            Object.defineProperty(e, a, { enumerable: !0, get: n[a] });
+      a.d = function (e, n) {
+        for (var t in n)
+          a.o(n, t) &&
+            !a.o(e, t) &&
+            Object.defineProperty(e, t, { enumerable: !0, get: n[t] });
       };
     })(),
     (function () {
-      t.g = (function () {
+      a.g = (function () {
         if ("object" === typeof globalThis) return globalThis;
         try {
           return this || new Function("return this")();
@@ -523,44 +550,44 @@
       })();
     })(),
     (function () {
-      t.o = function (e, n) {
+      a.o = function (e, n) {
         return Object.prototype.hasOwnProperty.call(e, n);
       };
     })(),
     (function () {
-      t.p = "/tpc-website/";
+      a.p = "/tpc-website/";
     })(),
     (function () {
       var e = { 143: 0 };
-      t.O.j = function (n) {
+      a.O.j = function (n) {
         return 0 === e[n];
       };
-      var n = function (n, a) {
+      var n = function (n, t) {
           var i,
             o,
-            s = a[0],
-            r = a[1],
-            c = a[2],
+            s = t[0],
+            r = t[1],
+            c = t[2],
             l = 0;
           if (
             s.some(function (n) {
               return 0 !== e[n];
             })
           ) {
-            for (i in r) t.o(r, i) && (t.m[i] = r[i]);
-            if (c) var p = c(t);
+            for (i in r) a.o(r, i) && (a.m[i] = r[i]);
+            if (c) var p = c(a);
           }
-          for (n && n(a); l < s.length; l++)
-            (o = s[l]), t.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
-          return t.O(p);
+          for (n && n(t); l < s.length; l++)
+            (o = s[l]), a.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
+          return a.O(p);
         },
-        a = (self["webpackChunktpc_website"] =
+        t = (self["webpackChunktpc_website"] =
           self["webpackChunktpc_website"] || []);
-      a.forEach(n.bind(null, 0)), (a.push = n.bind(null, a.push.bind(a)));
+      t.forEach(n.bind(null, 0)), (t.push = n.bind(null, t.push.bind(t)));
     })();
-  var a = t.O(void 0, [998], function () {
-    return t(3031);
+  var t = a.O(void 0, [998], function () {
+    return a(9759);
   });
-  a = t.O(a);
+  t = a.O(t);
 })();
-//# sourceMappingURL=app.f91b390b.js.map
+//# sourceMappingURL=app.87525805.js.map

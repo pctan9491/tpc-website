@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar">
-    <ul class="nav-list">
+    <button @click="toggleNav" class="nav-toggle">☰</button>
+    <!-- Hamburger icon -->
+    <ul class="nav-list" :class="{ 'nav-active': navOpen }">
       <li class="nav-item">
         <router-link to="/" class="nav-link">Home</router-link>
         <router-link to="/about" class="nav-link">About Me</router-link>
@@ -20,6 +22,16 @@
 <script>
 export default {
   name: "NavBar",
+  data() {
+    return {
+      navOpen: false,
+    };
+  },
+  methods: {
+    toggleNav() {
+      this.navOpen = !this.navOpen;
+    },
+  },
 };
 </script>
 
@@ -73,15 +85,25 @@ export default {
   color: #04aa6d; /* Change color on hover */
 }
 
-/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem; /* Slightly smaller font */
+  }
+}
+
+/* Styles for mobile devices */
 @media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
+  .nav-toggle {
+    display: block;
+    /* Style your hamburger icon */
   }
 
-  .nav-item {
-    margin: 0.5rem 0; /* Larger spacing for vertical layout */
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.nav-active {
+    display: flex; /* Show the nav when active */
   }
 }
 </style>
