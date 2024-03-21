@@ -21,7 +21,7 @@ export default {
   name: "Resume",
   methods: {
     downloadResume() {
-      // Assuming the 'public' folder is at the root of your web server and 'Resume-Tan-Ping-Cheun.pdf' is directly inside 'public'
+      // The 'public' folder is at the root of your web server and 'TanPingCheun_resume.pdf' is directly inside 'public'
       const resumePath = "TanPingCheun_resume.pdf"; // No need for '../../'
       window.location.href = resumePath;
     },
