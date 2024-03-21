@@ -22,7 +22,7 @@ export default {
   methods: {
     downloadResume() {
       // Assuming the 'public' folder is at the root of your web server and 'Resume-Tan-Ping-Cheun.pdf' is directly inside 'public'
-      const resumePath = "Resume-Tan-Ping-Cheun.pdf"; // No need for '../../'
+      const resumePath = "TanPingCheun_resume.pdf"; // No need for '../../'
       window.location.href = resumePath;
     },
   },
